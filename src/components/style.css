@@ -1,0 +1,78 @@
+:root{
+    --dark-color: #262727;
+    --color-fff: #FFFFFF;
+    --color-100: #F0F0F0;
+    --color-200: #EEEEEE;
+    --color-300: #E0E0E0;
+    --color-400: #BDBDBD;
+    --color-500: #525252;
+    --color-600: #464545;
+    --color-700: #363535;
+    --color-800: #252525;
+    --color-900: #181818;
+    --color-000: #000000;
+    --border-color: #E9E6E1;
+    --card-color: #F5F5F5;
+    --body-color: #F8F6F2;
+    --white-color: #FFFFFF;
+    --sidebar-color: #FFFFFF;
+    --primary-color: #2794EB;
+    --secondary-color: #00AC9A;
+}
+.form-select {
+    /* border-color: var(--border-color); */
+    color: var(--color-900);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 15px;
+    /* border: 0px !important; */
+}
+.btn.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.card{
+    background-color: var(--card-color);
+    border: 0;
+}
+.control{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: var(--border-color);
+
+}
+.validate{
+    color: red;
+    text-align: left;
+}
+.nominiform{
+   
+   box-shadow: rgb(0 0 0 / 5%) 0px 1px 3px, rgb(0 0 0 / 5%) 0px 20px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px;
+   border: 1px solid rgb(222, 226, 230);
+   padding: 3rem;
+   border-radius: 10px;
+}
+.button {
+    background-color: lightslategray; 
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    display: flex;
+    justify-content: start;
+  }
