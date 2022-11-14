@@ -21,17 +21,28 @@ export default function FormValidation() {
       </div>
       <Form onSubmit={handleSubmit(onSubmit)} className="nominiform">
         <div className="row">
-          <Form.Field className="col-lg-6 col-md-12">
+          <Form.Field className="col-lg-6 col-md-12 ">
             <div className="control">
               <label className="d-flex justify-content-start">
                 Relationship <span>*</span>
               </label>
-              <select className="form-select">
+              <select
+                className=" form-select"
+                {...register("relationship", {
+                  required: true,
+                })}
+              >
+                <option value="">Select Relationship</option>
                 <option value="1">Father</option>
                 <option value="2">Mother</option>
                 <option value="3">Brother</option>
-                <option value="3">Sister</option>
+                <option value="4">Sister</option>
               </select>
+            </div>
+            <div className="d-flex justify-content-start">
+              {errors.relationship && (
+                <span className="validate">Relationship is required</span>
+              )}
             </div>
           </Form.Field>
           <br />
@@ -73,11 +84,23 @@ export default function FormValidation() {
         </Form.Field>
         <br />
 
+        <div className="row">
+          <label className="d-flex justify-content-start">
+            Address <span>*</span>
+          </label>
+          <div className="col-6">
+            <input type="radio" />{" "}
+            <label>Field to enter complete address</label>
+          </div>
+
+          <div className="col-6">
+            <input type="radio" name="Same address" />{" "}
+            <label>Same as my address</label>
+          </div>
+        </div>
+
         <Form.Field className="col-12">
           <div className="control">
-            <label className="d-flex justify-content-start">
-              Address <span>*</span>
-            </label>
             <textarea
               type="text"
               placeholder="Write Somthing"
@@ -146,6 +169,7 @@ export default function FormValidation() {
               </label>
               <input
                 type="text"
+                defaultValue="India"
                 className="control"
                 {...register("country", { required: true })}
               />
@@ -157,7 +181,7 @@ export default function FormValidation() {
         </div>
         <br />
 
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Submit Details</Button>
       </Form>
     </div>
   );
