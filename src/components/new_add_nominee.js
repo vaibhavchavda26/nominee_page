@@ -21,7 +21,7 @@ export default function FormValidation() {
       </div>
       <Form onSubmit={handleSubmit(onSubmit)} className="nominiform">
         <div className="row">
-          <Form.Field className="col-lg-6 col-md-12 ">
+          <Form.Field className="col-lg-6 col-md-12">
             <div className="control">
               <label className="d-flex justify-content-start">
                 Relationship <span>*</span>
@@ -45,7 +45,6 @@ export default function FormValidation() {
               )}
             </div>
           </Form.Field>
-          <br />
 
           <Form.Field className="col-lg-6 col-md-12">
             <div>
